@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the troubleshooting guide
+    url: https://markmochi.github.io/sols-item-rarity-wiki/reference/troubleshooting/
+    about: Check the common fixes before opening a report.
+  - name: Learn how to write a useful bug report
+    url: https://markmochi.github.io/sols-item-rarity-wiki/reference/reporting-issues/
+    about: See what versions, logs, and reproduction steps to include.

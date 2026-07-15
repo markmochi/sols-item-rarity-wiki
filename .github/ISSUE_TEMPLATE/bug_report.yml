@@ -1,0 +1,119 @@
+name: Report a mod bug
+description: Tell us about a reproducible problem in Sol's Item Rarity.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please fill in every required field and remove passwords, server addresses, access tokens, or other private information from files before attaching them.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I am using the Item Rarity build made for my exact Minecraft version.
+          required: true
+        - label: I checked the troubleshooting guide and searched existing issues.
+          required: true
+        - label: I can reproduce this problem.
+          required: true
+
+  - type: dropdown
+    id: minecraft_version
+    attributes:
+      label: Minecraft version
+      options:
+        - 1.16.5 (Forge)
+        - 1.20.1 (Forge)
+        - 1.21.1 (NeoForge)
+        - 1.21.11 (NeoForge)
+    validations:
+      required: true
+
+  - type: input
+    id: mod_version
+    attributes:
+      label: Sol's Item Rarity version
+      description: Copy the version shown in your mod list or JAR filename.
+      placeholder: "1.7"
+    validations:
+      required: true
+
+  - type: input
+    id: loader_version
+    attributes:
+      label: Forge or NeoForge version
+      placeholder: "Example: Forge 47.2.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does it happen?
+      options:
+        - Single-player
+        - Dedicated server
+        - Both single-player and dedicated server
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+      placeholder: "The item showed... I expected..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Start from loading the world and list the exact actions that trigger the problem.
+      placeholder: |
+        1. Load a world
+        2. Obtain ...
+        3. Hold ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other installed mods
+      description: Attach a mod list or paste the relevant names and versions. Say whether Sol's Relic System is installed.
+      placeholder: "Sol's Relic System [version], JEI [version], etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and crash reports
+      description: Drag latest.log, debug.log, or the crash report into this box. Do not paste thousands of log lines directly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant configuration
+      description: If the issue involves rolls, stats, perks, or visuals, attach the edited TOML/JSON files or paste only the relevant entry.
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or video
+      description: Drag files here if the problem is visible in a tooltip, inventory, hotbar, or animation.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Include whether the issue still happens with only Item Rarity and its required loader installed, if you tested that.

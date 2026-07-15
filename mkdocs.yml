@@ -1,0 +1,99 @@
+site_name: Sol's Item Rarity
+site_description: The official player handbook for rarity rolls, equipment bonuses, utility perks, and server configuration.
+site_url: https://markmochi.github.io/sols-item-rarity-wiki/
+copyright: Sol's Item Rarity v1.7 Player Handbook
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  favicon: assets/images/items/diamond.png
+  logo: assets/images/items/diamond.png
+  font: false
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+
+plugins:
+  - search:
+      separator: '[\\s\\-\\.]+'
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - assets/stylesheets/loot-ledger.css
+
+extra_javascript:
+  - assets/javascripts/item-data.js
+  - assets/javascripts/rarity-tools.js
+
+extra:
+  generator: false
+  social: []
+
+nav:
+  - Handbook: index.md
+  - Start Here:
+      - Install the mod: getting-started/installation.md
+      - Five-minute start: getting-started/quick-start.md
+      - Supported versions: getting-started/version-support.md
+  - Rarity Guide:
+      - How rarity works: player-guide/rarity-basics.md
+      - Reveal an item: player-guide/revealing-items.md
+      - Rarity tiers: player-guide/rarity-tiers.md
+      - Stats and multipliers: player-guide/stats.md
+      - Utility tool perks: player-guide/utility-perks.md
+      - Find better rolls: player-guide/better-rolls.md
+      - Tooltips and borders: player-guide/visuals.md
+  - Item Reference:
+      - Search items and rolls: reference/item-lookup.md
+      - Default roll tables: reference/default-rolls.md
+      - Default stat packages: reference/default-stats.md
+      - Commands: reference/commands.md
+      - Compatibility: reference/compatibility.md
+      - FAQ & troubleshooting: reference/troubleshooting.md
+      - Report a bug: reference/reporting-issues.md
+  - Server Owners:
+      - Configuration map: server-owners/configuration.md
+      - Rarity chance pools: server-owners/chance-pools.md
+      - Stat attributes: server-owners/attributes.md
+      - Utility perk tuning: server-owners/utility-perks.md
+      - Fixed rarities: server-owners/fixed-rarities.md
+      - SetID item variants: server-owners/setid.md
+      - Visuals and performance: server-owners/performance.md
