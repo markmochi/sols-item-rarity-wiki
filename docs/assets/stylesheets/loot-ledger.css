@@ -159,7 +159,7 @@ body {
   margin: 0 0 2rem;
   padding: clamp(1.4rem, 5vw, 3.3rem);
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(18rem, .92fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
   align-items: center;
   gap: clamp(1.5rem, 5vw, 3.5rem);
   clip-path: polygon(0 18px, 18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px));
@@ -192,7 +192,15 @@ body {
 
 .loot-hero > * { position:relative; z-index:1; }
 .loot-hero__eyebrow { color:var(--loot-copper); font-size:.66rem; font-weight:900; letter-spacing:.18em; text-transform:uppercase; }
-.loot-hero h1 { margin:.5rem 0 .75rem; max-width: 35rem; font-size:clamp(2.5rem,6vw,4.8rem); line-height:.91; }
+.loot-hero h1 {
+  margin:.5rem 0 .75rem;
+  max-width:35rem;
+  font-size:clamp(2.5rem,6vw,4.8rem);
+  line-height:.91;
+  overflow-wrap:normal;
+  word-break:normal;
+  hyphens:none;
+}
 .loot-hero__lead { max-width:40rem; color:#c8c2b6; font-size:1rem; line-height:1.65; }
 .loot-hero__actions { margin-top:1.3rem; display:flex; flex-wrap:wrap; gap:.65rem; }
 
@@ -390,11 +398,6 @@ body {
 
 .compact-note { color:#8e8a83; font-size:.64rem; }
 .no-margin { margin:0 !important; }
-
-@media (max-width: 1400px) {
-  .loot-hero { grid-template-columns:1fr; }
-  .inspect-rig { min-height:22rem; }
-}
 
 @media (max-width: 900px) {
   .guide-flow { grid-template-columns:repeat(2,minmax(0,1fr)); }
