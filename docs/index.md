@@ -6,6 +6,7 @@
     <div class="loot-hero__actions">
       <a class="loot-button" href="getting-started/quick-start/">Start in five minutes</a>
       <a class="loot-button loot-button--ghost" href="reference/item-lookup/">Look up an item</a>
+      <a class="loot-button loot-button--ghost" href="changelog/">Release timeline</a>
     </div>
   </div>
   <div class="inspect-rig">
@@ -43,6 +44,15 @@
       </div>
     </div>
   </div>
+</div>
+
+## Latest release
+
+<div class="loot-card loot-card--gold release-preview">
+  <span class="loot-card__kicker">Latest drop · June 24, 2026</span>
+  <h3>Sol's Item Rarity v1.7</h3>
+  <p>Improves connected utility perks, crop replanting, enchantment compatibility, perk-tier balance, and detection for modded weapons and working tools.</p>
+  <p><a href="changelog/">Open the complete release timeline →</a></p>
 </div>
 
 ## Your first roll
