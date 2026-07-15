@@ -57,7 +57,7 @@ markdown_extensions:
       custom_checkbox: true
 
 extra_css:
-  - assets/stylesheets/loot-ledger.css
+  - assets/stylesheets/loot-ledger.css?v=2
 
 extra_javascript:
   - assets/javascripts/item-data.js
