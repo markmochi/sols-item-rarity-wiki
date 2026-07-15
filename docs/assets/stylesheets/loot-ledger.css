@@ -1,4 +1,13 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("../fonts/PixelifySans-Variable.ttf") format("truetype-variations");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
 :root {
+  --loot-display-font: "Pixelify Sans", "Lucida Console", monospace;
   --loot-void: #090a0c;
   --loot-coal: #101217;
   --loot-panel: #171a20;
@@ -62,6 +71,33 @@ body {
   background: #0d0f13;
 }
 
+.md-header__title,
+.md-tabs__link,
+.md-nav__title,
+.md-nav__link--active,
+.md-typeset :is(h1, h2, h3, h4, h5, h6, strong, b, th, summary, .admonition-title),
+.rarity-rail :is(b, .rarity-rail__title),
+.rarity-footer strong,
+.loot-hero__eyebrow,
+.loot-button,
+.game-tooltip :is(.game-tooltip__name, .game-tooltip__header),
+.loot-card__kicker,
+.guide-step :is(.guide-step__number, strong),
+.tier-chip strong,
+.rarity-badge,
+.formula-panel b,
+.tool-rack__item strong,
+.perk-card strong,
+.calculator label,
+.lookup-panel label,
+.calculator button,
+.lookup-panel button,
+.lookup-result__box strong,
+.version-callout strong,
+.frame-sample span {
+  font-family: var(--loot-display-font);
+}
+
 .md-tabs__link { font-weight: 700; letter-spacing: .025em; }
 .md-tabs__link--active, .md-tabs__link:hover { color: var(--loot-gold-bright); }
 .md-search__form { border: 1px solid rgba(224,173,82,.28); background:#0b0d11; }
@@ -71,9 +107,9 @@ body {
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Trebuchet MS", sans-serif;
+  font-family: var(--loot-display-font);
   font-weight: 700;
-  letter-spacing: .045em;
+  letter-spacing: .015em;
 }
 
 .md-typeset h1 {
@@ -185,7 +221,7 @@ body {
   right: -3.4rem;
   bottom: 2.4rem;
   color: rgba(224,173,82,.035);
-  font: 900 3.6rem/1 Impact, sans-serif;
+  font: 700 3.6rem/1 var(--loot-display-font);
   letter-spacing: .08em;
   transform: rotate(-90deg);
 }
@@ -196,7 +232,8 @@ body {
   margin:.5rem 0 .75rem;
   max-width:35rem;
   font-size:clamp(2.5rem,6vw,4.8rem);
-  line-height:.91;
+  line-height:.95;
+  letter-spacing:-.015em;
   overflow-wrap:normal;
   word-break:normal;
   hyphens:none;
@@ -321,7 +358,7 @@ body {
 .guide-step:last-child::after { display:none; }
 .guide-step__number { position:absolute; top:.45rem; left:.55rem; color:var(--loot-copper); font-size:.58rem; font-weight:900; }
 .guide-step img { width:3.4rem; height:3.4rem; object-fit:contain; image-rendering:pixelated; filter:drop-shadow(0 5px 5px #000); }
-.guide-step__symbol { width:3.4rem;height:3.4rem;display:grid;place-items:center;color:var(--loot-gold-bright);font:900 1.1rem/1 Consolas;border:1px solid rgba(224,173,82,.45);background:#18191a; }
+.guide-step__symbol { width:3.4rem;height:3.4rem;display:grid;place-items:center;color:var(--loot-gold-bright);font:700 1.1rem/1 var(--loot-display-font);border:1px solid rgba(224,173,82,.45);background:#18191a; }
 .guide-step strong { color:#f0eadf; }
 .guide-step span { color:#918d85; font-size:.62rem; line-height:1.45; }
 
@@ -393,7 +430,7 @@ body {
 
 .frame-gallery { margin:1rem 0 1.5rem; display:grid; grid-template-columns:repeat(3,minmax(10rem,1fr)); gap:.8rem; }
 .frame-sample { min-height:10rem; padding:1rem; display:grid; place-items:center; border:8px solid transparent; background:#07070a; box-shadow:0 12px 28px rgba(0,0,0,.3); }
-.frame-sample span { font:900 .7rem/1 Consolas,monospace; }
+.frame-sample span { font:700 .7rem/1 var(--loot-display-font); }
 .frame-sample--uncommon{border-image:url('../textures/tooltip/rarity_uncommon_frame.png') 28 round}.frame-sample--rare{border-image:url('../textures/tooltip/rarity_rare_frame.png') 28 round}.frame-sample--epic{border-image:url('../textures/tooltip/rarity_epic_frame.png') 28 round}.frame-sample--legendary{border-image:url('../textures/tooltip/rarity_legendary_frame.png') 28 round}.frame-sample--mythical{border-image:url('../textures/tooltip/rarity_mythical_frame.png') 28 round}.frame-sample--supreme{border-image:url('../textures/tooltip/rarity_supreme_frame.png') 28 round}
 
 .compact-note { color:#8e8a83; font-size:.64rem; }
