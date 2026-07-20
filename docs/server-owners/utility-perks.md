@@ -6,8 +6,9 @@
 
 ```json
 {
-  "configVersion": 5,
+  "configVersion": 6,
   "enabled": true,
+  "toolCompatibilityBlacklist": ["tconstruct"],
   "perkCount": {},
   "tierWeights": {},
   "toolPerkWeights": {},
@@ -22,6 +23,37 @@
 ```
 
 Keep `configVersion` at the generated value.
+
+## Tool compatibility blacklist
+
+Use `toolCompatibilityBlacklist` when another mod's tools already include connected mining, tree felling, excavation, or custom durability behavior:
+
+```json
+"toolCompatibilityBlacklist": [
+  "tconstruct",
+  "anothermod:*",
+  "anothermod:specific_tool"
+]
+```
+
+The list accepts:
+
+| Entry | Protection scope |
+|---|---|
+| `modid` | Every tool from that mod |
+| `modid:*` | Every tool from that mod; works the same as `modid` |
+| `modid:item_id` | Only that exact item |
+
+Tinkers' Construct (`tconstruct`) is included by default. When an existing config is upgraded to v1.71, the entry is added automatically without replacing the rest of the file.
+
+For matching tools:
+
+- rarity and safe bonuses such as Break Efficiency continue to work;
+- Vein Miner, Timber, Excavation, and Durability Guard do not activate;
+- conflicting perks already stored on an item remain visible but say they are disabled;
+- future perk rolls exclude those conflicting perks.
+
+This is targeted protection. Use the common TOML option below only when connected breaking should be disabled for **every** tool.
 
 ## Perk count
 
@@ -127,4 +159,6 @@ Use caution when disabling a live system. Existing stored perks may need item re
 
 ## Connected-tool compatibility
 
-The common TOML setting `disableConnectedToolPerks = true` disables only `ore_vein`, `timber`, and `excavation`. It does not change the JSON or erase those stored perks.
+The common TOML setting `disableConnectedToolPerks = true` disables `ore_vein`, `timber`, and `excavation` globally. It does not disable Durability Guard, change the JSON, or erase stored perks.
+
+Use `toolCompatibilityBlacklist` for individual mods or items. Use `disableConnectedToolPerks` when another installed mod adds connected mining behavior to tools across the entire pack.

@@ -38,7 +38,7 @@ configured value × rarity multiplier
 | `miningSpeedBonus` | Mining Speed | Fractional tool break-speed multiplier |
 | `customLore` | Plain lore lines | Appended to the tooltip |
 
-Use positive values for functional bonuses. Negative values are not displayed or applied by the normal v1.7 paths.
+Use positive values for functional bonuses. Negative values are not displayed or applied by the normal v1.71 paths.
 
 ## Package priority and replacement
 
@@ -65,7 +65,7 @@ If no SetID or item package applies, recognized equipment can receive a baseline
 
 Some name-detected weapons can roll rarity without matching an automatic stat template. Configure them explicitly.
 
-## Lore limitation in v1.7
+## Lore limitation in v1.71
 
 A `customLore`-only object does not count as a selected package. Include an applicable nonzero numeric field if this file must supply lore for that stack.
 
@@ -80,7 +80,7 @@ For a utility tool, a small meaningful `miningSpeedBonus` can make the package s
 }
 ```
 
-## Known v1.7 type limits
+## Known v1.71 type limits
 
 - Shield armor and knockback values may display but are not applied as worn armor.
 - Knockback resistance on a weapon may display, but weapons do not apply this bonus.

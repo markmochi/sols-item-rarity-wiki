@@ -57,7 +57,7 @@ The server enabled connected-tool compatibility mode. Check `disableConnectedToo
 
 ## Why did Vein Miner break non-ore blocks?
 
-The perk checks same-type connected blocks and tool effectiveness, not an ore tag. This is normal v1.7 behavior.
+The perk checks same-type connected blocks and tool effectiveness, not an ore tag. This is normal v1.71 behavior.
 
 ## Why did a fixed tool's perk quality not match its visible rarity?
 
@@ -65,11 +65,11 @@ A fixed display rule and a stored random roll can overlap. Utility perks use the
 
 ## Why do shield or weapon knockback values show but not work?
 
-In v1.7, shield armor/knockback fields and knockback resistance placed on a weapon can be displayed, but those bonuses work only on worn armor. This is a known limitation.
+In v1.71, shield armor/knockback fields and knockback resistance placed on a weapon can be displayed, but those bonuses work only on worn armor. This is a known limitation.
 
 ## Why does a bow's Attack Damage not increase arrow damage?
 
-The configured value modifies the player's general attack-damage attribute while held. There is no projectile-damage hook in v1.7.
+The configured value modifies the player's general attack-damage attribute while held. There is no projectile-damage hook in v1.71.
 
 ## Why do I see fewer frames or no animation?
 

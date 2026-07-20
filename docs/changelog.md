@@ -11,7 +11,57 @@ Follow the major gameplay additions, balance changes, compatibility improvements
 
 <article class="release-entry release-entry--latest" markdown>
 
-<div class="release-entry__meta"><span class="release-entry__version">v1.7</span><time datetime="2026-06-24">June 24, 2026</time><span class="release-entry__badge">Latest</span></div>
+<div class="release-entry__meta"><span class="release-entry__version">v1.71</span><time datetime="2026-07">July 2026</time><span class="release-entry__badge">Latest</span></div>
+
+## Modded tool compatibility
+
+Version 1.71 prevents Item Rarity's connected-block and durability perks from interfering with tools that already provide their own mining or durability logic. It is available for **Forge 1.16.5**, **Forge 1.20.1**, **NeoForge 1.21.1**, and **NeoForge 1.21.11**.
+
+### Download
+
+<div class="release-downloads release-downloads--all">
+  <a href="https://www.curseforge.com/minecraft/mc-mods/sols-item-rarity/files"><strong>Download v1.71 on CurseForge</strong><span>Choose the file matching your Minecraft version and loader</span></a>
+</div>
+
+### Compatibility fixes
+
+- Fixed connected-block perks stacking with another mod's tool logic and breaking far more blocks than intended.
+- **Tinkers' Construct is protected by default.**
+- Protected tools keep their rarity, Break Efficiency, and other safe bonuses.
+- Vein Miner, Timber, Excavation, and Durability Guard are disabled for protected tools.
+- Existing protected tools keep their saved perks, but conflicting effects are shown as disabled and no longer activate.
+- Newly rolled protected tools do not receive the conflicting perks.
+
+### Add support for more mods
+
+`utility_buffs.json` now includes a targeted compatibility list:
+
+```json
+"toolCompatibilityBlacklist": [
+  "tconstruct",
+  "anothermod",
+  "anothermod:specific_tool"
+]
+```
+
+- Use `modid` or `modid:*` to protect every tool from a mod.
+- Use `modid:item_id` to protect only one item.
+- Existing configs upgrade automatically with `tconstruct` as the default entry while preserving other settings.
+- If another mod adds connected mining to every tool, the global `disableConnectedToolPerks = true` option remains available in `solsitemrarity-common.toml`.
+
+See [utility perk tuning](server-owners/utility-perks.md#tool-compatibility-blacklist) for setup examples and the difference between targeted and global protection.
+
+### Sol's Relic System integration
+
+- Sol's Relic System follows the same compatibility list.
+- Protected tools do not roll the Relic Durability% main stat and do not have their custom durability rewritten.
+- Other eligible Relic stats continue to work normally.
+
+</article>
+
+<article class="release-entry" markdown>
+
+<div class="release-entry__meta"><span class="release-entry__version">v1.7</span><time datetime="2026-06-24">June 24, 2026</time></div>
 
 ## Utility and compatibility improvements
 

@@ -1,6 +1,6 @@
 # Supported versions
 
-The current Item Rarity release is **v1.7** on four Minecraft lines.
+The current Item Rarity release is **v1.71** on four Minecraft lines.
 
 | Minecraft | Loader | Main version notes |
 |---|---|---|

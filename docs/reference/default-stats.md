@@ -39,7 +39,7 @@ Other defaults:
 - Turtle Helmet: `+0.5 Armor`, `+2 Health`
 - Shield: `+0.5 Armor`, `+10% Knockback Resistance` configured
 
-!!! warning "Current v1.7 shield limitation"
+!!! warning "Current v1.71 shield limitation"
     Shield armor and knockback values can display in the tooltip, but these bonuses apply only to worn armor. A knockback-resistance field on a sword or spear has the same limitation.
 
 ## Automatic modded-equipment packages

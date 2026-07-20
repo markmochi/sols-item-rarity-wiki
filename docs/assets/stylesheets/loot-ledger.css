@@ -490,6 +490,7 @@ body {
 .release-entry > :last-child { margin-bottom:0; }
 
 .release-downloads { margin:.7rem 0 1.25rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem; }
+.release-downloads--all { grid-template-columns:1fr; }
 .release-downloads a { padding:.65rem .75rem;display:grid;gap:.12rem;color:var(--loot-ivory);border:1px solid rgba(224,173,82,.28);background:#101216; }
 .release-downloads a:hover { color:var(--loot-gold-bright);border-color:rgba(255,210,119,.58);background:#17181b; }
 .release-downloads strong { color:var(--loot-gold-bright);font-size:.72rem; }

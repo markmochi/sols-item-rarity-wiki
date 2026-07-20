@@ -23,6 +23,8 @@ When rarity stat bonuses are disabled through that integration:
 - their combat bonus lines are hidden;
 - utility tool perks remain available.
 
+In v1.71, Sol's Relic System also follows Item Rarity's `toolCompatibilityBlacklist`. A protected tool does not roll the Relic Durability% main stat and does not have its custom durability rewritten. Other eligible Relic stats continue to work normally.
+
 Older Relic System builds without that setting default to suppressing Item Rarity's combat stats.
 
 ## Modded weapon detection
@@ -49,7 +51,25 @@ The final fallback probes how quickly a stack mines representative stone, wood, 
 !!! note "Detection and stats are separate"
     A modded item can be recognized for a rarity roll without matching an automatic stat package. If a weapon rolls rarity but shows no bonus, the server should add a full entry to `rarity_attributes.json`.
 
-## Vein-mining and tree-felling mods
+## Protect individual mods or tools
+
+Add entries to `toolCompatibilityBlacklist` in `utility_buffs.json` when only certain tools need protection:
+
+```json
+"toolCompatibilityBlacklist": [
+  "tconstruct",
+  "anothermod",
+  "anothermod:specific_tool"
+]
+```
+
+- `modid` and `modid:*` match every tool from that mod.
+- `modid:item_id` matches one exact item.
+- Tinkers' Construct is included by default.
+
+Protected tools keep rarity, Break Efficiency, and other safe bonuses. Vein Miner, Timber, Excavation, and Durability Guard are disabled. Existing conflicting perks stay saved on the tool but clearly display that they are disabled; new protected tools do not roll them.
+
+## Disable connected perks globally
 
 Set:
 

@@ -49,9 +49,9 @@
 ## Latest release
 
 <div class="loot-card loot-card--gold release-preview">
-  <span class="loot-card__kicker">Latest drop · June 24, 2026</span>
-  <h3>Sol's Item Rarity v1.7</h3>
-  <p>Improves connected utility perks, crop replanting, enchantment compatibility, perk-tier balance, and detection for modded weapons and working tools.</p>
+  <span class="loot-card__kicker">Latest drop · July 2026</span>
+  <h3>Sol's Item Rarity v1.71</h3>
+  <p>Adds targeted compatibility protection for Tinkers' Construct and other modded tools, preventing overlapping mining and durability systems without removing safe rarity bonuses.</p>
   <p><a href="changelog/">Open the complete release timeline →</a></p>
 </div>
 

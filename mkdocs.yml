@@ -1,7 +1,7 @@
 site_name: Sol's Item Rarity
 site_description: The official player handbook for rarity rolls, equipment bonuses, utility perks, and server configuration.
 site_url: https://markmochi.github.io/sols-item-rarity-wiki/
-copyright: Sol's Item Rarity v1.7 Player Handbook
+copyright: Sol's Item Rarity v1.71 Player Handbook
 
 theme:
   name: material
@@ -57,7 +57,7 @@ markdown_extensions:
       custom_checkbox: true
 
 extra_css:
-  - assets/stylesheets/loot-ledger.css?v=4
+  - assets/stylesheets/loot-ledger.css?v=5
 
 extra_javascript:
   - assets/javascripts/item-data.js

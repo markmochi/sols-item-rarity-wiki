@@ -11,7 +11,7 @@ Sol's Item Rarity must match your **exact Minecraft version and mod loader**. It
 | 1.21.1 | NeoForge | 21.1.1 | 21 |
 | 1.21.11 | NeoForge | 21.11.42 | 21 |
 
-All four current builds report **Sol's Item Rarity v1.7**.
+All four current builds report **Sol's Item Rarity v1.71**.
 
 !!! warning "Do not mix close-looking versions"
     The 1.21.1 and 1.21.11 builds use different game APIs and resources. Use the dedicated 1.21.11 JAR on 1.21.11 even if another build appears to accept a broad version range.
@@ -22,7 +22,7 @@ All four current builds report **Sol's Item Rarity v1.7**.
 2. Start the game once, then close it.
 3. Place the matching Sol's Item Rarity JAR in the instance's `mods` folder.
 4. Start Minecraft and open **Mods** from the title screen.
-5. Confirm that **solsItemRarity** appears and reports version `1.7`.
+5. Confirm that **solsItemRarity** appears and reports version `1.71`.
 6. Enter a world and hold a weapon or tool. Its tooltip should gain a rarity line.
 
 ## Multiplayer server
