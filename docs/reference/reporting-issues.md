@@ -16,13 +16,15 @@ A useful report lets someone reproduce the same problem without guessing. Use th
 |---|---|
 | Minecraft version | `1.20.1` |
 | Loader and version | `Forge 47.2.0` |
-| Item Rarity version | `1.7` |
+| Item Rarity version | `1.7.2` |
 | Environment | Single-player or dedicated server |
 | Other mods | Names and exact versions; state whether Sol's Relic System is installed |
 | Steps | Numbered actions starting before the problem |
 | Expected result | What should have happened |
 | Actual result | What happened instead |
 | Evidence | Logs, crash report, config, screenshot, or short video |
+
+For v1.7.2 settings or display reports, include `treatAllToolsAsWeapons`, `equipmentOnlyRarities`, and `disableHotbarRarityBorders` values. For formatted-name issues, identify the item, any mod that formats its name, and the exact tooltip or hotbar text. For Spectator borders, state whether the normal hotbar is hidden.
 
 ## Write reproducible steps
 

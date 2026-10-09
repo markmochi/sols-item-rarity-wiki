@@ -2,6 +2,8 @@
 
 Random-pool gear starts unidentified so simply viewing it in a chest or menu does not consume its roll.
 
+When a server enables `equipmentOnlyRarities`, non-equipment items cannot roll or display rarity, even with a configured item or SetID pool. Weapons, tools, armor, and shields remain eligible. See [How rarity works](rarity-basics.md#equipment-only-servers).
+
 ## The reveal sequence
 
 <div class="guide-flow">

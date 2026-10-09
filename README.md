@@ -4,7 +4,7 @@ The official player handbook for **Sol's Item Rarity v1.7.2**.
 
 [Download on CurseForge](https://www.curseforge.com/minecraft/mc-mods/sols-item-rarity/files/all) · [Download on Modrinth](https://modrinth.com/mod/sols-item-rarity/versions)
 
-[Read the wiki](https://markmochi.github.io/sols-item-rarity-wiki/) · [Five-minute start](https://markmochi.github.io/sols-item-rarity-wiki/getting-started/quick-start/) · [Search items and rolls](https://markmochi.github.io/sols-item-rarity-wiki/reference/item-lookup/)
+[Read the wiki](https://markmochi.github.io/sols-item-rarity-wiki/) · [Changelog timeline](https://markmochi.github.io/sols-item-rarity-wiki/changelog/) · [Five-minute start](https://markmochi.github.io/sols-item-rarity-wiki/getting-started/quick-start/) · [Search items and rolls](https://markmochi.github.io/sols-item-rarity-wiki/reference/item-lookup/)
 
 The guide covers rarity reveals, all seven tiers, equipment bonuses, utility tool perks, default roll tables, visual settings, mod compatibility, and complete server configuration for:
 

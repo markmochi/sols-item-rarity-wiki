@@ -2,6 +2,8 @@
 
 Every built-in vanilla equipment pool totals 100, so the default weights below are also percentages. A dash means the tier cannot roll from that pool.
 
+The v1.7.2 gameplay options do not change these default weights. `equipmentOnlyRarities` changes which items are eligible, and `treatAllToolsAsWeapons` allows weapon bonuses on detected tools while keeping their rarity pool and utility perks.
+
 ## Equipment families
 
 | Equipment group | Common | Uncommon | Rare | Epic | Legendary | Mythical | Supreme |

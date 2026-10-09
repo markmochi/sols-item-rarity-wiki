@@ -61,7 +61,7 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/item-data.js
-  - assets/javascripts/rarity-tools.js
+  - assets/javascripts/rarity-tools.js?v=172
 
 extra:
   generator: false
@@ -69,7 +69,7 @@ extra:
 
 nav:
   - Handbook: index.md
-  - Downloads: https://www.curseforge.com/minecraft/mc-mods/sols-item-rarity/files/all
+  - Changelog: changelog.md
   - Start Here:
       - Install the mod: getting-started/installation.md
       - Five-minute start: getting-started/quick-start.md

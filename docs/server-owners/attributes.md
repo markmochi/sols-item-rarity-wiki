@@ -23,6 +23,8 @@ The final value for non-Common equipment is:
 configured value × rarity multiplier
 ```
 
+The weapon entries below also apply to detected utility tools when `treatAllToolsAsWeapons = true`. This does not change the worn-armor restrictions.
+
 ## Supported fields
 
 | Field | Tooltip meaning | Application |

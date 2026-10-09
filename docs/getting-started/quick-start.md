@@ -30,7 +30,7 @@ Common items receive no rarity stat bonus or utility perks.
 
 ## 5. Equip or use it
 
-- Hold combat weapons to receive applicable attack bonuses.
+- Hold combat weapons to receive applicable attack bonuses. With the server's optional `treatAllToolsAsWeapons` setting enabled, detected utility tools can also receive weapon bonuses while keeping their tool perks.
 - Wear armor in its correct slot for armor-related bonuses.
 - Use utility tools normally for passive perks such as Break Efficiency or Durability Guard.
 - Hold **Sneak** while breaking to activate Vein Miner, Timber, or Excavation.

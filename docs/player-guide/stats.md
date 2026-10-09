@@ -33,6 +33,8 @@ Item stats are packages, not random substats. The item decides which base bonuse
   <div class="calculator__result" data-bonus-result aria-live="polite"></div>
 </div>
 
+When `treatAllToolsAsWeapons = true`, detected utility tools count as weapons for the attack bonuses below. They still keep their tool perks and mining-speed bonuses; armor-only fields still require worn armor.
+
 ## Available equipment stats
 
 | Tooltip stat | Meaning | When it applies |

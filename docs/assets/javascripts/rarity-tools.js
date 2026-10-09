@@ -249,20 +249,20 @@
         const attributes = versionData.attributes && versionData.attributes[id];
         const sections = [];
         if (fixedTier) {
-          sections.push(`<p><strong>Fixed catalog rarity:</strong> ${rarityBadge(fixedTier)}<br><span class="compact-note">This item displays the same tier every time. A fixed rarity does not change its loot drop rate.</span></p>`);
+          sections.push(`<p><strong>Fixed catalog rarity:</strong> ${rarityBadge(fixedTier)}<br><span class="compact-note">Under default settings, this item displays the same tier every time. Equipment-only mode hides rarity on non-equipment items. A fixed rarity does not change its loot drop rate.</span></p>`);
         }
         if (pool) {
           sections.push(`<p><strong>Explicit random pool</strong></p>${oddsBars(pool)}`);
         }
         if (!fixedTier && !pool) {
-          sections.push(`<p><strong>No explicit fixed rule or vanilla pool.</strong><br><span class="compact-note">If this is recognized equipment, it uses the automatic pool. Otherwise it uses the server's default rarity.</span></p>`);
+          sections.push(`<p><strong>No explicit fixed rule or vanilla pool.</strong><br><span class="compact-note">If this is recognized equipment, it uses the automatic pool. Otherwise it uses the server's default rarity unless equipment-only mode excludes it.</span></p>`);
         }
         if (attributes) {
           sections.push(`<p><strong>Configured base stat package</strong><br><span class="compact-note">These values are multiplied by the revealed rarity. Common is skipped.</span></p>${attributeBoxes(attributes)}`);
         }
 
         result.dataset.state = "success";
-        result.innerHTML = `<div class="lookup-result__meta"><h3 class="no-margin">${escapeHtml(titleFromId(id))}</h3><span class="lookup-result__id">${escapeHtml(id)}</span></div>${sections.join("")}`;
+        result.innerHTML = `<div class="lookup-result__meta"><h3 class="no-margin">${escapeHtml(titleFromId(id))}</h3><span class="lookup-result__id">${escapeHtml(id)}</span></div>${sections.join("")}<p class="compact-note">Built-in defaults only. Server item rules, equipment-only mode, and the optional weapon bonuses on tools can change the result.</p>`;
       };
 
       version.addEventListener("change", () => { updateSuggestions(); search(); });

@@ -8,6 +8,7 @@ Rarity visuals can be tuned independently from gameplay. Lowering visual complex
 
 ```toml
 showCustomBorders = true
+disableHotbarRarityBorders = false
 enableChromaTextEffects = true
 enableAnimatedBorders = true
 borderRenderMode = "FULL"
@@ -19,6 +20,7 @@ Uses rarity-themed tooltip decoration, particles, glow, animated high-tier slot 
 
 ```toml
 showCustomBorders = true
+disableHotbarRarityBorders = false
 enableChromaTextEffects = true
 enableAnimatedBorders = false
 borderRenderMode = "SIMPLE"
@@ -30,6 +32,7 @@ Keeps clear rarity frames and animated text while reducing decorative rendering.
 
 ```toml
 showCustomBorders = true
+disableHotbarRarityBorders = false
 enableChromaTextEffects = false
 enableAnimatedBorders = false
 borderRenderMode = "STATIC"

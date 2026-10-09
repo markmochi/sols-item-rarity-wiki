@@ -17,6 +17,8 @@ For utility tools, also compare:
 2. perk names;
 3. each Roman-numeral perk tier.
 
+If the server enables `treatAllToolsAsWeapons`, also compare the tool's weapon bonuses and, when a compatible Sol's Relic System build is installed, its Relic stats. The setting keeps utility perks available.
+
 A Rare tool with the perk you need can be more useful than an Epic tool with a less relevant set. A Supreme tool is special because every default perk it receives is tier V.
 
 ## A practical hunt

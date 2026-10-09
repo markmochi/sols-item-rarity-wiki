@@ -44,7 +44,7 @@ The list accepts:
 | `modid:*` | Every tool from that mod; works the same as `modid` |
 | `modid:item_id` | Only that exact item |
 
-Tinkers' Construct (`tconstruct`) is included by default. When an existing config is upgraded to v1.71, the entry is added automatically without replacing the rest of the file.
+Tinkers' Construct (`tconstruct`) is included by default. The compatibility migration introduced in v1.71 remains in v1.7.2: older configs receive the entry automatically without replacing the rest of the file.
 
 For matching tools:
 
@@ -54,6 +54,12 @@ For matching tools:
 - future perk rolls exclude those conflicting perks.
 
 This is targeted protection. Use the common TOML option below only when connected breaking should be disabled for **every** tool.
+
+## Weapon bonuses alongside tool perks
+
+`treatAllToolsAsWeapons = true` in the common TOML lets detected tools receive weapon bonuses and compatible Relic System stats without changing their utility-perk pools. It defaults to `false` and does not reroll saved perks. The compatibility blacklist and `disableConnectedToolPerks` still restrict the conflicting effects described above.
+
+Restart after changing the TOML, then re-equip affected items or relog. See [Weapon bonuses on tools](configuration.md#weapon-bonuses-on-tools) for attribute packages and integration rules.
 
 ## Perk count
 

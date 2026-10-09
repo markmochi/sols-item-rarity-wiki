@@ -38,7 +38,7 @@ body:
     attributes:
       label: Sol's Item Rarity version
       description: Copy the version shown in your mod list or JAR filename.
-      placeholder: "1.7"
+      placeholder: "1.7.2"
     validations:
       required: true
 

@@ -28,7 +28,7 @@ Choose a Minecraft version and enter an item ID. The lookup shows its built-in f
 
 ### Fixed catalog rarity
 
-The item always displays that tier. This is a presentation rule; it does not change how often vanilla or another mod drops the item.
+Under default settings, the item always displays that tier. With `equipmentOnlyRarities = true`, non-equipment items have no rarity presentation even if a fixed tier is listed. Fixed rarity does not change how often vanilla or another mod drops the item.
 
 Most fixed collectibles do not gain stats because they are not wearable or held equipment. A configured fixed weapon or armor piece can still use an applicable stat package.
 
