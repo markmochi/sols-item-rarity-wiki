@@ -59,6 +59,20 @@ Keeps colored names and the rarity line without custom border rendering.
 
 `showCustomBorders = false` and `borderRenderMode = "OFF"` both disable custom border presentation.
 
+## Hide only hotbar borders
+
+In `config/solsitemrarity-common.toml`:
+
+```toml
+[general]
+showCustomBorders = true
+disableHotbarRarityBorders = true
+```
+
+This hides the hotbar's rarity frames while preserving inventory and container borders. It defaults to `false` and works with the border mode you choose. It does not hide item names, change rarity, or disable stats and perks. To show inventory borders, keep `showCustomBorders = true` and choose a mode other than `OFF`.
+
+v1.7.2 also prevents rarity frames remaining visible when Spectator Mode hides the hotbar. The hotbar-only option is a local presentation setting and is not part of the server's custom JSON sync packet. Restart the client after editing it.
+
 ## Chroma speed
 
 ```toml
@@ -71,6 +85,7 @@ Valid range: `100.0` to `10000.0` milliseconds. Lower values cycle faster. The s
 
 - `showRarityInTooltip` hides or shows only the rarity line.
 - `colorItemNames` controls the item name presentation.
+- `disableHotbarRarityBorders` hides only hotbar rarity borders.
 - `showAttributeBonuses` hides both stat lines and the Utility Perks tooltip section. It does not by itself disable all effects.
 - `applyAttributeModifiers` disables equipment bonuses and also gates Break Efficiency/custom mining-speed bonuses.
 - Other utility perks have separate action paths and can remain active.

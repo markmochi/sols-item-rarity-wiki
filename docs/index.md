@@ -6,7 +6,7 @@
     <div class="loot-hero__actions">
       <a class="loot-button" href="getting-started/quick-start/">Start in five minutes</a>
       <a class="loot-button loot-button--ghost" href="reference/item-lookup/">Look up an item</a>
-      <a class="loot-button loot-button--ghost" href="changelog/">Release timeline</a>
+      <a class="loot-button loot-button--ghost" href="https://www.curseforge.com/minecraft/mc-mods/sols-item-rarity/files/all">Downloads</a>
     </div>
   </div>
   <div class="inspect-rig">
@@ -49,11 +49,31 @@
 ## Latest release
 
 <div class="loot-card loot-card--gold release-preview">
-  <span class="loot-card__kicker">Latest drop · July 2026</span>
-  <h3>Sol's Item Rarity v1.71</h3>
-  <p>Adds targeted compatibility protection for Tinkers' Construct and other modded tools, preventing overlapping mining and durability systems without removing safe rarity bonuses.</p>
-  <p><a href="changelog/">Open the complete release timeline →</a></p>
+  <span class="loot-card__kicker">Latest drop · October 9, 2026</span>
+  <h3>Sol's Item Rarity v1.7.2</h3>
+  <p>Fixes formatted item names and Spectator hotbar borders, moves commands to /sol itemrarity, and adds optional equipment-only rarities, weapon stats for tools, and a hotbar-only border switch.</p>
+  <p><a href="https://www.curseforge.com/minecraft/mc-mods/sols-item-rarity/files/all">Download on CurseForge →</a> · <a href="https://modrinth.com/mod/sols-item-rarity/versions">Download on Modrinth →</a></p>
 </div>
+
+??? info "v1.7.2 release notes"
+    **Fixes**
+
+    - Fixed rarity borders remaining visible when the hotbar is hidden in Spectator Mode.
+    - Fixed rarity-colored item names displaying broken boxes, stray symbols, or extra letters in tooltips and above the hotbar, including names formatted by other mods.
+    - Fixed formatted item names not retaining text styles such as bold and italic when displaying rarity colors.
+    - Fixed formatted item names not being correctly centered above the hotbar.
+
+    **Changes**
+
+    - All ItemRarity commands now use `/sol itemrarity ...`. Use `/sol itemrarity reload`, `/sol itemrarity info`, or `/sol itemrarity help`. The old `/solsrarity` and `/sr` commands have been removed.
+
+    **Additions**
+
+    - Added an optional setting that allows all tools to receive weapon bonuses and Sol's Relic System stats without losing their normal tool perks.
+    - Added an optional equipment-only mode that restricts rarities and rarity buffs to weapons, tools, armor, and shields.
+    - Added an option to hide rarity borders in the hotbar without affecting rarity borders in inventories.
+
+    All three new settings are off by default. See the [configuration map](server-owners/configuration.md#optional-gameplay-modes-in-v172) for setup and [Tooltips and borders](player-guide/visuals.md) for the visual changes.
 
 ## Your first roll
 

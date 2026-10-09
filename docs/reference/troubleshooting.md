@@ -35,7 +35,7 @@ For modded gear, add a complete item entry to `rarity_attributes.json`.
 
 ## Why did changed stats not refresh?
 
-After `/sr reload`, remove and re-equip the affected item. If that does not refresh it, relog or respawn so transient modifiers are rebuilt.
+After `/sol itemrarity reload`, remove and re-equip the affected item. If that does not refresh it, relog or respawn so transient modifiers are rebuilt.
 
 Restart the game/server after editing `solsitemrarity-common.toml`.
 
@@ -57,7 +57,7 @@ The server enabled connected-tool compatibility mode. Check `disableConnectedToo
 
 ## Why did Vein Miner break non-ore blocks?
 
-The perk checks same-type connected blocks and tool effectiveness, not an ore tag. This is normal v1.71 behavior.
+The perk checks same-type connected blocks and tool effectiveness, not an ore tag. This is normal v1.7.2 behavior.
 
 ## Why did a fixed tool's perk quality not match its visible rarity?
 
@@ -65,11 +65,31 @@ A fixed display rule and a stored random roll can overlap. Utility perks use the
 
 ## Why do shield or weapon knockback values show but not work?
 
-In v1.71, shield armor/knockback fields and knockback resistance placed on a weapon can be displayed, but those bonuses work only on worn armor. This is a known limitation.
+In v1.7.2, shield armor/knockback fields and knockback resistance placed on a weapon can be displayed, but those bonuses work only on worn armor. This is a known limitation.
 
 ## Why does a bow's Attack Damage not increase arrow damage?
 
-The configured value modifies the player's general attack-damage attribute while held. There is no projectile-damage hook in v1.71.
+The configured value modifies the player's general attack-damage attribute while held. There is no projectile-damage hook in v1.7.2.
+
+## Why did diamonds or other collectibles lose their rarity?
+
+Check `equipmentOnlyRarities` in the server's common TOML. When enabled, only recognized weapons, tools, armor, and shields receive rarity treatment, even if another item has a fixed, random, or SetID rule. Turn it off and restart to restore normal non-equipment rarity rules.
+
+## Can tools receive weapon or Relic System stats?
+
+Yes. In v1.7.2, enable `treatAllToolsAsWeapons` in the server's common TOML, then restart and re-equip or relog. Detected tools keep their utility perks. Item Rarity combat bonuses still depend on `applyAttributeModifiers` and Relic System's stat-suppression setting. Relic stats require a compatible Relic System build.
+
+## Why do /solsrarity and /sr no longer work?
+
+v1.7.2 removes both command roots. Use `/sol itemrarity reload`, `/sol itemrarity info`, or `/sol itemrarity help` with operator/gamemaster permission.
+
+## Why are formatted item names broken or off-center?
+
+Update the client and server to v1.7.2. It fixes stray formatting symbols, preserves bold and italic styles, and correctly centers the formatted name above the hotbar. If it persists, report the exact item, formatting mod, versions, and a screenshot through the [bug-report guide](reporting-issues.md).
+
+## Why do only hotbar borders disappear?
+
+Check `disableHotbarRarityBorders`. With it enabled, inventory borders still display. Rarity frames also stay hidden when Spectator Mode hides the hotbar. If frames remain in that situation, confirm you are using v1.7.2.
 
 ## Why do I see fewer frames or no animation?
 
@@ -84,7 +104,7 @@ Check:
 
 ## What if JSON is malformed?
 
-Look for missing commas, mismatched braces, unquoted keys, or invalid tier names. Fix the file, then run `/sr reload`.
+Look for missing commas, mismatched braces, unquoted keys, or invalid tier names. Fix the file, then run `/sol itemrarity reload`.
 
 During a live reload, a malformed main rarity JSON normally leaves the previous active map in memory. A malformed utility file falls back to default utility settings in memory. Do not assume a failed reload applied only part of the intended edit; fix the file and reload again.
 

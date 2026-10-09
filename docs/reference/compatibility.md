@@ -23,9 +23,17 @@ When rarity stat bonuses are disabled through that integration:
 - their combat bonus lines are hidden;
 - utility tool perks remain available.
 
-In v1.71, Sol's Relic System also follows Item Rarity's `toolCompatibilityBlacklist`. A protected tool does not roll the Relic Durability% main stat and does not have its custom durability rewritten. Other eligible Relic stats continue to work normally.
+Sol's Relic System also follows Item Rarity's `toolCompatibilityBlacklist`. A protected tool does not roll the Relic Durability% main stat and does not have its custom durability rewritten. Other eligible Relic stats continue to work normally.
 
 Older Relic System builds without that setting default to suppressing Item Rarity's combat stats.
+
+## Weapon stats and Relic stats on tools
+
+In v1.7.2, set `treatAllToolsAsWeapons = true` under `[general]` in Item Rarity's common TOML to allow detected utility tools to receive weapon bonuses and become eligible for weapon stats in compatible Sol's Relic System builds. Utility perks remain available. Use a Relic System build that supports Item Rarity's all-tools setting.
+
+The switch defaults to `false`. Relic System's `crossMod.disableRarityStatBonuses` can still suppress Item Rarity combat bonuses, and the tool compatibility blacklist still protects custom mining and durability logic. It does not add Relic System features when that mod is absent.
+
+If `equipmentOnlyRarities = true`, non-equipment Relic materials and the Aster Table no longer display the fixed presentation tiers listed above; this setting controls Item Rarity treatment rather than removing those items.
 
 ## Modded weapon detection
 
@@ -89,7 +97,7 @@ Already rolled connected perks remain visible and report that compatibility mode
 
 ## Multiplayer configuration sync
 
-On join and `/sr reload`, the server sends clients its item pools, merged fixed entries, attribute packages, SetID rules, utility-perk configuration, and connected-tool compatibility flag.
+On join and `/sol itemrarity reload`, the server sends clients its item pools, merged fixed entries, attribute packages, SetID rules, utility-perk configuration, and the `disableConnectedToolPerks`, `treatAllToolsAsWeapons`, and `equipmentOnlyRarities` flags.
 
 Other TOML presentation settings and multipliers are not included in that custom sync. Keep the server and client TOML aligned when everyone should see the same visual choices and tooltip calculations.
 

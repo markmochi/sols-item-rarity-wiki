@@ -1,6 +1,6 @@
 # Supported versions
 
-The current Item Rarity release is **v1.71** on four Minecraft lines.
+The current Item Rarity release is **v1.7.2** on four Minecraft lines.
 
 | Minecraft | Loader | Main version notes |
 |---|---|---|
@@ -17,7 +17,8 @@ The current Item Rarity release is **v1.71** on four Minecraft lines.
 - Utility tool perks with tiers I–V
 - Colored names, tooltips, inventory slots, and hotbar slots
 - Random item pools, fixed rarities, custom attributes, and SetID variants
-- `/solsrarity` and `/sr` server commands
+- `/sol itemrarity reload`, `/sol itemrarity info`, and `/sol itemrarity help` server commands
+- Optional weapon bonuses for tools, equipment-only rarities, and hotbar-only border hiding
 - Sol's Relic System compatibility
 
 ## Gameplay differences to notice

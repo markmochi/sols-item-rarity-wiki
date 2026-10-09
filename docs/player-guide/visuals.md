@@ -29,6 +29,14 @@ An item can show:
 
 Unidentified items instead use a purple italic name and `Rarity: ???`.
 
+## Formatted item names
+
+v1.7.2 fixes broken boxes, stray symbols, and extra letters in rarity-colored names, including names formatted by other mods. Rarity coloring preserves text styles such as bold and italic in tooltips and above the hotbar. The held-item name is centered using the styled text's rendered width.
+
+## Hotbar visibility
+
+Rarity borders stay hidden when the normal hotbar is hidden in Spectator Mode. To hide only hotbar rarity borders during normal play, set `disableHotbarRarityBorders = true` under `[general]` in `config/solsitemrarity-common.toml`. Inventory and container rarity borders remain enabled. The option defaults to `false`.
+
 ## Rarity frame styles
 
 The 1.21.11 build includes its own tooltip frame textures. The other builds create matching rarity treatments through their version's rendering system.
@@ -72,7 +80,7 @@ Turning off animated borders while keeping `FULL` makes the full mode use a simp
 
 ## If the effects are distracting
 
-Try these in order:
+For a clear hotbar while keeping inventory borders, use `disableHotbarRarityBorders = true`. For fewer effects everywhere, try these in order:
 
 1. keep borders on but set `enableAnimatedBorders = false`;
 2. set `borderRenderMode = "SIMPLE"`;

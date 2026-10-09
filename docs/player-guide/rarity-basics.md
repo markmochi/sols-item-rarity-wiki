@@ -21,6 +21,10 @@ Random rarity answers **“How did this particular sword roll?”** Fixed rarity
 
 Fixed rarity does not make an item drop more often or less often. Item Rarity does not rewrite chest or mob loot tables.
 
+## Equipment-only servers
+
+In v1.7.2, servers can enable `equipmentOnlyRarities` to restrict rarity and its buffs to recognized weapons, tools, armor, and shields. Collectibles such as diamonds and Nether Stars then have no rarity presentation, including when listed in fixed or SetID rules. This mode is off by default. See the [configuration map](../server-owners/configuration.md#equipment-only-rarities).
+
 ## Rule priority
 
 When more than one rule could match an item, the highest rule wins:

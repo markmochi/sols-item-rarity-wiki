@@ -2,6 +2,8 @@
 
 SetID rules let two stacks with the same item ID use different rarity or stat rules. They are useful for boss rewards, quest items, named sets, and custom drops.
 
+SetID rules still respect `equipmentOnlyRarities`: an excluded non-equipment item cannot regain rarity display, rolls, or buffs through a SetID entry.
+
 ## Step 1: give the stack a SetID string
 
 === "Minecraft 1.16.5 / 1.20.1"
@@ -101,4 +103,4 @@ For deterministic tagged utility gear, use a one-tier SetID chance pool rather t
 
 ## Apply changes
 
-Run `/sr reload`. Newly revealed matching variants use the new pool. Fixed SetID rules affect matching stacks immediately; active equipment stats may need re-equipping.
+Run `/sol itemrarity reload`. Newly revealed matching variants use the new pool. Fixed SetID rules affect matching stacks immediately; active equipment stats may need re-equipping.

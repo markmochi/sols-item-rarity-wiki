@@ -2,6 +2,9 @@
 
 Use `custom_rarities.json` when an item type should always display one tier.
 
+!!! note "Equipment-only mode"
+    When `equipmentOnlyRarities = true`, fixed rules apply only to recognized weapons, tools, armor, and shields. Non-equipment items lose rarity presentation even if listed here. Their config entries remain saved.
+
 ## Format
 
 ```json
@@ -77,4 +80,4 @@ These integration entries are registered even when the Relic System is not insta
 
 ## Apply changes
 
-Run `/sr reload`. The fixed rule takes priority as soon as the current configuration reaches the client. Re-equip gear if its effective multiplier changed and active stats need to refresh.
+Run `/sol itemrarity reload`. The fixed rule takes priority as soon as the current configuration reaches the client. Re-equip gear if its effective multiplier changed and active stats need to refresh.

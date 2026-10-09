@@ -38,7 +38,7 @@ configured value × rarity multiplier
 | `miningSpeedBonus` | Mining Speed | Fractional tool break-speed multiplier |
 | `customLore` | Plain lore lines | Appended to the tooltip |
 
-Use positive values for functional bonuses. Negative values are not displayed or applied by the normal v1.71 paths.
+Use positive values for functional bonuses. Negative values are not displayed or applied by the normal v1.7.2 paths.
 
 ## Package priority and replacement
 
@@ -52,12 +52,16 @@ Example: if a diamond sword entry contains only `attackDamageBonus`, its built-i
 
 ## Utility tools
 
-Recognized utility tools discard combat and armor fields from their chosen attribute package. They retain:
+By default (`treatAllToolsAsWeapons = false`), recognized utility tools discard combat and armor fields from their chosen attribute package. They retain:
 
 - `miningSpeedBonus`;
 - custom lore.
 
 Their main progression comes from Utility Perks.
+
+Set `treatAllToolsAsWeapons = true` under `[general]` in the common TOML to keep the full chosen package and allow weapon bonuses on tools. With no applicable explicit package, a detected tool gets an automatic base `+0.5 Attack Damage` and `+0.05 Attack Speed`. Tool perks remain available, and mining-speed fields still work. Armor-only fields still require worn armor; the switch does not change equipment-slot rules.
+
+If Sol's Relic System suppresses Item Rarity stat bonuses, that integration still takes priority. See the [optional gameplay modes](configuration.md#optional-gameplay-modes-in-v172).
 
 ## Automatic modded-equipment packages
 
@@ -65,7 +69,7 @@ If no SetID or item package applies, recognized equipment can receive a baseline
 
 Some name-detected weapons can roll rarity without matching an automatic stat template. Configure them explicitly.
 
-## Lore limitation in v1.71
+## Lore limitation in v1.7.2
 
 A `customLore`-only object does not count as a selected package. Include an applicable nonzero numeric field if this file must supply lore for that stack.
 
@@ -80,7 +84,7 @@ For a utility tool, a small meaningful `miningSpeedBonus` can make the package s
 }
 ```
 
-## Known v1.71 type limits
+## Known v1.7.2 type limits
 
 - Shield armor and knockback values may display but are not applied as worn armor.
 - Knockback resistance on a weapon may display, but weapons do not apply this bonus.
@@ -90,6 +94,6 @@ Design custom packages around the fields that the item's equipment type can actu
 
 ## Reloading
 
-Run `/sr reload`, then have players remove and re-equip affected gear. Relogging also rebuilds transient modifiers.
+Run `/sol itemrarity reload`, then have players remove and re-equip affected gear. Relogging also rebuilds transient modifiers.
 
 Restart after changing global multipliers in the common TOML.

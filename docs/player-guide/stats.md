@@ -93,15 +93,15 @@ At Mythical `3×`:
 
 - Common equipment receives no rarity bonus.
 - A higher rarity cannot invent a stat the item does not have in its package.
-- Utility tools use utility perks instead of automatic combat attributes.
+- By default, utility tools use utility perks instead of automatic combat attributes. Servers can enable `treatAllToolsAsWeapons` to give detected tools weapon bonuses while keeping their perks.
 - A fixed-rarity weapon or armor piece can still receive stats when it has an applicable package and is equipped.
 - Changing an equipped item's package on the server may require players to remove and re-equip it, or relog, before the active modifier refreshes.
 
-!!! note "Bow and crossbow bonuses in v1.71"
+!!! note "Bow and crossbow bonuses in v1.7.2"
     Their configured `Attack Damage` changes the player's general attack-damage attribute while held. It does not directly increase arrow or bolt damage.
 
 !!! warning "Displayed shield and weapon resistance values"
-    In v1.71, shield armor/knockback entries and knockback resistance placed on a weapon may appear in the tooltip but are not applied by the equipment-slot rules. Treat those lines as a known limitation when comparing gear.
+    In v1.7.2, shield armor/knockback entries and knockback resistance placed on a weapon may appear in the tooltip but are not applied by the equipment-slot rules. Treat those lines as a known limitation when comparing gear.
 
 ## With Sol's Relic System
 

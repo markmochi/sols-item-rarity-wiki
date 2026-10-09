@@ -21,6 +21,9 @@ Choose a Minecraft version and enter an item ID. The lookup shows its built-in f
   <div class="lookup-result" data-lookup-result aria-live="polite"></div>
 </div>
 
+!!! note "Built-in defaults, not live server rules"
+    This lookup does not read your server config. With `equipmentOnlyRarities = true`, non-equipment items have no rarity display even when the catalog below lists a fixed tier. `treatAllToolsAsWeapons = true` can also enable weapon bonuses on detected tools; explicit item and SetID packages still take priority.
+
 ## How to read a result
 
 ### Fixed catalog rarity

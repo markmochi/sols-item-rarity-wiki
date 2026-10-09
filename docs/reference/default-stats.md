@@ -39,7 +39,7 @@ Other defaults:
 - Turtle Helmet: `+0.5 Armor`, `+2 Health`
 - Shield: `+0.5 Armor`, `+10% Knockback Resistance` configured
 
-!!! warning "Current v1.71 shield limitation"
+!!! warning "Current v1.7.2 shield limitation"
     Shield armor and knockback values can display in the tooltip, but these bonuses apply only to worn armor. A knockback-resistance field on a sword or spear has the same limitation.
 
 ## Automatic modded-equipment packages
@@ -57,7 +57,7 @@ When recognized equipment has no item or SetID package, it can receive:
 | Leg armor | +0.20 armor, +0.75 health |
 | Boots | +0.10 armor, +1% movement speed |
 | Shield | Nominal +0.20 armor and +5% KB resistance; subject to the shield limitation |
-| Utility tool | No automatic combat package; uses utility perks |
+| Utility tool | By default, no automatic combat package; with `treatAllToolsAsWeapons = true`, +0.50 damage and +0.05 attack speed alongside utility perks |
 
 Name-detected weapons such as guns, staves, or scythes can receive a rarity without matching one of these automatic packages. A server owner can add their stats explicitly.
 

@@ -11,7 +11,7 @@ Sol's Item Rarity must match your **exact Minecraft version and mod loader**. It
 | 1.21.1 | NeoForge | 21.1.1 | 21 |
 | 1.21.11 | NeoForge | 21.11.42 | 21 |
 
-All four current builds report **Sol's Item Rarity v1.71**.
+All four current builds report **Sol's Item Rarity v1.7.2**. Download the matching file from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/sols-item-rarity/files/all) or [Modrinth](https://modrinth.com/mod/sols-item-rarity/versions).
 
 !!! warning "Do not mix close-looking versions"
     The 1.21.1 and 1.21.11 builds use different game APIs and resources. Use the dedicated 1.21.11 JAR on 1.21.11 even if another build appears to accept a broad version range.
@@ -22,7 +22,7 @@ All four current builds report **Sol's Item Rarity v1.71**.
 2. Start the game once, then close it.
 3. Place the matching Sol's Item Rarity JAR in the instance's `mods` folder.
 4. Start Minecraft and open **Mods** from the title screen.
-5. Confirm that **solsItemRarity** appears and reports version `1.71`.
+5. Confirm that **solsItemRarity** appears and reports version `1.7.2`.
 6. Enter a world and hold a weapon or tool. Its tooltip should gain a rarity line.
 
 ## Multiplayer server
@@ -35,6 +35,12 @@ All four current builds report **Sol's Item Rarity v1.71**.
 6. Start it again, connect, and hold a fresh piece of equipment to test a reveal.
 
 The network protocol expects Item Rarity on both sides. A missing or incompatible client build can prevent connection.
+
+## Updating to v1.7.2
+
+Replace the old Item Rarity JAR with the matching v1.7.2 build on the server and every client. Back up your world and config first. Update command scripts to use `/sol itemrarity ...`; `/solsrarity` and `/sr` no longer work.
+
+The new `treatAllToolsAsWeapons`, `equipmentOnlyRarities`, and `disableHotbarRarityBorders` settings default to `false`. Existing rarity rolls and utility perks do not need to be rerolled for the update.
 
 ## Existing worlds
 

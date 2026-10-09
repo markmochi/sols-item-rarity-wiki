@@ -1,7 +1,7 @@
 site_name: Sol's Item Rarity
 site_description: The official player handbook for rarity rolls, equipment bonuses, utility perks, and server configuration.
 site_url: https://markmochi.github.io/sols-item-rarity-wiki/
-copyright: Sol's Item Rarity v1.71 Player Handbook
+copyright: Sol's Item Rarity v1.7.2 Player Handbook
 
 theme:
   name: material
@@ -69,7 +69,7 @@ extra:
 
 nav:
   - Handbook: index.md
-  - Changelog: changelog.md
+  - Downloads: https://www.curseforge.com/minecraft/mc-mods/sols-item-rarity/files/all
   - Start Here:
       - Install the mod: getting-started/installation.md
       - Five-minute start: getting-started/quick-start.md

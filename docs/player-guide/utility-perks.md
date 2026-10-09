@@ -2,6 +2,8 @@
 
 Pickaxes, axes, shovels, and hoes can roll persistent perks after their rarity is revealed. A tool's rarity controls both perk count and the quality range of each perk tier.
 
+Servers can also enable `treatAllToolsAsWeapons` in v1.7.2 so detected tools receive weapon bonuses and compatible Sol's Relic System stats alongside utility perks. The option is off by default and does not override connected-perk restrictions or the tool compatibility blacklist.
+
 <div class="tool-rack">
   <div class="tool-rack__item"><img src="../../assets/images/items/diamond_pickaxe.png" alt="Pickaxe"><strong>Pickaxe</strong><span>Break Efficiency · Vein Miner · Durability Guard</span></div>
   <div class="tool-rack__item"><img src="../../assets/images/items/diamond_axe.png" alt="Axe"><strong>Axe</strong><span>Break Efficiency · Timber · Durability Guard</span></div>

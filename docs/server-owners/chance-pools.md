@@ -2,6 +2,8 @@
 
 Use `rarity_chances.json` to give an item a custom weighted roll.
 
+When `equipmentOnlyRarities = true`, only recognized weapons, tools, armor, and shields can roll. A JSON pool for another item does not override that restriction.
+
 ## Basic format
 
 ```json
@@ -93,7 +95,7 @@ Use `setid_raritychances.json` when only a tagged variant of an item should use 
 Run:
 
 ```mcfunction
-/sr reload
+/sol itemrarity reload
 ```
 
 The new pool is used by future unrolled items. It does not reroll existing stacks.

@@ -1,6 +1,8 @@
 # Sol's Item Rarity Wiki
 
-The official player handbook for **Sol's Item Rarity**.
+The official player handbook for **Sol's Item Rarity v1.7.2**.
+
+[Download on CurseForge](https://www.curseforge.com/minecraft/mc-mods/sols-item-rarity/files/all) · [Download on Modrinth](https://modrinth.com/mod/sols-item-rarity/versions)
 
 [Read the wiki](https://markmochi.github.io/sols-item-rarity-wiki/) · [Five-minute start](https://markmochi.github.io/sols-item-rarity-wiki/getting-started/quick-start/) · [Search items and rolls](https://markmochi.github.io/sols-item-rarity-wiki/reference/item-lookup/)
 

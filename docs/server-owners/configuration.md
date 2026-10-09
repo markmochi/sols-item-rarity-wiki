@@ -5,7 +5,7 @@ Item Rarity separates global switches from item data. Back up the config folder 
 ## File locations
 
 <div class="config-map">
-  <div class="config-file"><code>config/solsitemrarity-common.toml</code><span>Master enable, tooltip and border options, stat multipliers, automatic equipment pool, connected-tool compatibility.</span></div>
+  <div class="config-file"><code>config/solsitemrarity-common.toml</code><span>Master enable, tooltip and border options, stat multipliers, automatic equipment pool, equipment-only mode, weapon stats for tools, connected-tool compatibility.</span></div>
   <div class="config-file"><code>config/solsitemrarity/rarity_chances.json</code><span>Explicit per-item random rarity pools.</span></div>
   <div class="config-file"><code>config/solsitemrarity/custom_rarities.json</code><span>Fixed-rarity additions and overrides.</span></div>
   <div class="config-file"><code>config/solsitemrarity/rarity_attributes.json</code><span>Per-item base stat packages and custom lore.</span></div>
@@ -26,12 +26,15 @@ Item Rarity separates global switches from item data. Back up the config folder 
 | `showRarityInTooltip` | `true` | Boolean | Shows the rarity line |
 | `showAttributeBonuses` | `true` | Boolean | Shows stat and Utility Perk sections |
 | `showCustomBorders` | `true` | Boolean | Enables rarity borders |
+| `disableHotbarRarityBorders` | `false` | Boolean | Hides only hotbar rarity borders; inventory and container borders remain enabled |
 | `enableChromaTextEffects` | `true` | Boolean | Animates item names and rarity-colored text |
 | `enableAnimatedBorders` | `true` | Boolean | Enables full decorative border animation |
 | `borderRenderMode` | `"FULL"` | FULL, SIMPLE, STATIC, OFF | Sets border complexity |
 | `colorItemNames` | `true` | Boolean | Colors tooltip and held-item names |
 | `applyAttributeModifiers` | `true` | Boolean | Applies equipment stats and gates Break Efficiency/custom mining speed |
 | `disableConnectedToolPerks` | `false` | Boolean | Disables only Vein Miner, Timber, Excavation |
+| `treatAllToolsAsWeapons` | `false` | Boolean | Allows detected utility tools to receive weapon bonuses and compatible Relic System stats while keeping tool perks |
+| `equipmentOnlyRarities` | `false` | Boolean | Restricts rarity display, rolls, and buffs to recognized weapons, tools, armor, and shields, including for JSON-listed items |
 | `rainbowSpeed` | `1500.0` | 100–10000; lower is faster | Chroma cycle duration |
 | `defaultRarity` | `"COMMON"` | Any tier name | Fallback for otherwise unmatched items |
 
@@ -65,6 +68,34 @@ Common remains skipped even if its multiplier is changed.
 
 This pool affects only auto-detected equipment absent from `rarity_chances.json`. Edit the JSON to change listed vanilla gear.
 
+## Optional gameplay modes in v1.7.2
+
+These settings belong in `config/solsitemrarity-common.toml` under `[general]`. Both gameplay modes are off by default; enable only the behavior your server wants.
+
+### Weapon bonuses on tools
+
+```toml
+[general]
+treatAllToolsAsWeapons = true
+```
+
+Detected utility tools can receive weapon bonuses and become eligible for weapon stats in compatible Sol's Relic System builds. Their normal utility perks still work. With no applicable item or SetID stat package, the automatic tool package is `+0.5 Attack Damage` and `+0.05 Attack Speed` before rarity scaling. Explicit packages take priority.
+
+This does not bypass `applyAttributeModifiers`, Relic System's `crossMod.disableRarityStatBonuses`, `disableConnectedToolPerks`, or the tool compatibility blacklist. See [Stat attributes](attributes.md#utility-tools) and [Compatibility](../reference/compatibility.md#weapon-stats-and-relic-stats-on-tools).
+
+### Equipment-only rarities
+
+```toml
+[general]
+equipmentOnlyRarities = true
+```
+
+Only recognized weapons, utility tools, armor, and shields receive rarity display, rolls, and rarity buffs. Other items, such as diamonds and Nether Stars, stop displaying rarity even if they have fixed rules, random pools, or SetID entries. This eligibility check happens **before** the rule priority below; JSON rules cannot opt an excluded item back in.
+
+The option does not erase saved rolls or config entries. Turning it off restores the normal rules for those items. The [item lookup](../reference/item-lookup.md) lists built-in defaults; it does not read your server's active settings.
+
+Restart after changing either gameplay setting, then re-equip affected gear or relog to refresh active stats. For a visual-only hotbar switch, see [Visuals and performance](performance.md#hide-only-hotbar-borders).
+
 ## Rule priority
 
 1. SetID fixed rarity
@@ -88,7 +119,7 @@ Attribute packages replace lower-priority packages instead of merging with them.
 2. Edit one file at a time with a plain-text editor.
 3. Keep JSON keys and strings in double quotes.
 4. Validate commas and braces.
-5. Use `/sr reload` for JSON edits.
+5. Use `/sol itemrarity reload` for JSON edits.
 6. Re-equip changed gear or relog when active modifiers need to refresh.
 7. Restart after changing the common TOML.
 
@@ -105,6 +136,6 @@ Attribute packages replace lower-priority packages instead of merging with them.
 
 ## Client synchronization
 
-The server sends JSON mappings, utility settings, and the connected-tool compatibility flag to clients on join and reload. Most other TOML values are not included in that custom packet. Keep client and server TOML aligned for consistent presentation and tooltip calculations.
+The server sends JSON mappings, utility settings, and the `disableConnectedToolPerks`, `treatAllToolsAsWeapons`, and `equipmentOnlyRarities` flags to clients on join and reload. Most other TOML values are not included in that custom packet. Keep client and server TOML aligned for consistent presentation and tooltip calculations.
 
 The serialized configuration limit is 262,144 characters.
